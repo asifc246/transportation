@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=3.2.0,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "cargo_flow"
+version = "1.0.0"
+description = "Cargo Flow — Booking → Vehicle Allocation → Waybill → Invoice"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://github.com/your-org/cargo_flow"

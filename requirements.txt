@@ -1,0 +1,2 @@
+# Frappe and ERPNext are installed separately via bench
+# Add any additional pip dependencies here
