@@ -1,0 +1,22 @@
+{
+ "based_on": "booking_date",
+ "chart_name": "Bookings by Status",
+ "chart_type": "Group By",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Dashboard Chart",
+ "document_type": "Booking",
+ "filters_json": "[]",
+ "group_by_based_on": "status",
+ "group_by_type": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Cargo Flow",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Bookings by Status",
+ "owner": "Administrator",
+ "time_interval": "Monthly",
+ "timespan": "Last Year",
+ "type": "Donut",
+ "use_report_chart": 0
+}

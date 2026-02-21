@@ -1,0 +1,22 @@
+{
+ "based_on": "waybill_date",
+ "chart_name": "Monthly Revenue",
+ "chart_type": "Sum",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Dashboard Chart",
+ "document_type": "Waybill",
+ "filters_json": "[{\"fieldname\": \"status\", \"operator\": \"=\", \"value\": \"Delivered\"}]",
+ "group_by_based_on": "",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Cargo Flow",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Monthly Revenue",
+ "owner": "Administrator",
+ "time_interval": "Monthly",
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "value_based_on": "total_charges"
+}

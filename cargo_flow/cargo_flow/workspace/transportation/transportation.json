@@ -1,0 +1,85 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"section-doctypes\",\"type\":\"header\",\"data\":{\"text\":\"Documents\",\"col\":12}},{\"id\":\"shortcuts-row\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking\",\"col\":3}},{\"id\":\"shortcuts-row-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Allocation\",\"col\":3}},{\"id\":\"shortcuts-row-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill\",\"col\":3}},{\"id\":\"shortcuts-row-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"section-reports\",\"type\":\"header\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"report-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking Summary\",\"col\":3}},{\"id\":\"report-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Utilization\",\"col\":3}},{\"id\":\"report-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill Status Report\",\"col\":3}},{\"id\":\"report-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue Invoice Report\",\"col\":3}}]",
+ "creation": "2026-02-21 11:51:43.615165",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Transportation",
+ "links": [],
+ "modified": "2026-02-21 11:51:43.615165",
+ "modified_by": "Administrator",
+ "module": "Cargo Flow",
+ "name": "Transportation",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Booking",
+   "link_to": "Booking",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Vehicle Allocation",
+   "link_to": "Vehicle Allocation",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Waybill",
+   "link_to": "Waybill",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Booking Summary",
+   "link_to": "Booking Summary",
+   "report_ref_doctype": "Booking",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Vehicle Utilization",
+   "link_to": "Vehicle Utilization",
+   "report_ref_doctype": "Vehicle Allocation",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Waybill Status Report",
+   "link_to": "Waybill Status Report",
+   "report_ref_doctype": "Waybill",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Revenue Invoice Report",
+   "link_to": "Revenue Invoice Report",
+   "report_ref_doctype": "Waybill",
+   "type": "Report"
+  }
+ ],
+ "title": "Transportation"
+}
