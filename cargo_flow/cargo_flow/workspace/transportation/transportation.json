@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"section-doctypes\",\"type\":\"header\",\"data\":{\"text\":\"Documents\",\"col\":12}},{\"id\":\"shortcuts-row\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking\",\"col\":3}},{\"id\":\"shortcuts-row-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Allocation\",\"col\":3}},{\"id\":\"shortcuts-row-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill\",\"col\":3}},{\"id\":\"shortcuts-row-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"section-reports\",\"type\":\"header\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"report-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking Summary\",\"col\":3}},{\"id\":\"report-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Utilization\",\"col\":3}},{\"id\":\"report-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill Status Report\",\"col\":3}},{\"id\":\"report-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue Invoice Report\",\"col\":3}}]",
+ "content": "[{\"id\":\"section-doctypes\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Documents</span>\",\"col\":12}},{\"id\":\"oMzBjPtPWK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle\",\"col\":3}},{\"id\":\"CWar2B4zx9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Driver\",\"col\":3}},{\"id\":\"shortcuts-row\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking\",\"col\":3}},{\"id\":\"shortcuts-row-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Allocation\",\"col\":3}},{\"id\":\"shortcuts-row-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill\",\"col\":3}},{\"id\":\"shortcuts-row-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"section-reports\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reports</span>\",\"col\":12}},{\"id\":\"report-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking Summary\",\"col\":3}},{\"id\":\"report-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Utilization\",\"col\":3}},{\"id\":\"report-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill Status Report\",\"col\":3}},{\"id\":\"report-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue Invoice Report\",\"col\":3}}]",
  "creation": "2026-02-21 11:51:43.615165",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,7 +11,7 @@
  "is_hidden": 0,
  "label": "Transportation",
  "links": [],
- "modified": "2026-02-21 11:51:43.615165",
+ "modified": "2026-02-24 12:32:48.042831",
  "modified_by": "Administrator",
  "module": "Cargo Flow",
  "name": "Transportation",
@@ -24,11 +24,27 @@
  "sequence_id": 2.0,
  "shortcuts": [
   {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vehicle",
+   "link_to": "Vehicle",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
    "color": "Blue",
    "doc_view": "List",
    "label": "Booking",
    "link_to": "Booking",
    "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Driver",
+   "link_to": "Driver",
+   "stats_filter": "[]",
    "type": "DocType"
   },
   {

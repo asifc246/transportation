@@ -1,0 +1,41 @@
+[
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-02-20 15:04:42.201213",
+  "name": "Cargo Booking Agent",
+  "restrict_to_domain": null,
+  "role_name": "Cargo Booking Agent",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-02-20 15:04:42.235391",
+  "name": "Cargo Admin",
+  "restrict_to_domain": null,
+  "role_name": "Cargo Admin",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-02-20 15:04:42.243440",
+  "name": "Logistics Manager",
+  "restrict_to_domain": null,
+  "role_name": "Logistics Manager",
+  "two_factor_auth": 0
+ }
+]

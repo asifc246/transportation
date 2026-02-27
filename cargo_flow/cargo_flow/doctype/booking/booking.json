@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "CF-BK-.YYYY.-.#####",
- "creation": "2024-01-01 00:00:00.000000",
+ "creation": "2024-01-01 00:00:00",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -51,28 +51,42 @@
   "section_links",
   "vehicle_allocation",
   "col_break_9",
-  "waybill_count"
+  "waybill_count",
+  "amended_from"
  ],
  "fields": [
-  {"fieldname": "section_basic", "fieldtype": "Section Break", "label": "Basic Information"},
-  {"fieldname": "booking_date", "fieldtype": "Date", "label": "Booking Date", "reqd": 1, "default": "Today"},
   {
+   "fieldname": "section_basic",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "default": "Today",
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "label": "Booking Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Draft\nConfirmed\nAllocated\nIn Transit\nDelivered\nCancelled",
-   "default": "Draft",
-   "read_only": 1,
-   "in_list_view": 1
+   "read_only": 1
   },
-  {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
   {
    "fieldname": "booking_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Booking Type",
    "options": "Import\nExport\nDomestic",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "transport_type",
@@ -81,27 +95,105 @@
    "options": "Road\nRail\nAir\nSea",
    "reqd": 1
   },
-
-  {"fieldname": "section_customer", "fieldtype": "Section Break", "label": "Customer Information"},
-  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer", "reqd": 1, "in_list_view": 1},
-  {"fieldname": "customer_name", "fieldtype": "Data", "label": "Customer Name", "fetch_from": "customer.customer_name", "read_only": 1},
-  {"fieldname": "col_break_2", "fieldtype": "Column Break"},
-  {"fieldname": "contact_person", "fieldtype": "Link", "label": "Contact Person", "options": "Contact"},
-  {"fieldname": "contact_phone", "fieldtype": "Data", "label": "Contact Phone"},
-  {"fieldname": "contact_email", "fieldtype": "Data", "label": "Contact Email", "options": "Email"},
-
-  {"fieldname": "section_route", "fieldtype": "Section Break", "label": "Origin & Destination"},
-  {"fieldname": "origin", "fieldtype": "Data", "label": "Origin", "reqd": 1, "in_list_view": 1},
-  {"fieldname": "origin_address", "fieldtype": "Small Text", "label": "Origin Address"},
-  {"fieldname": "col_break_3", "fieldtype": "Column Break"},
-  {"fieldname": "destination", "fieldtype": "Data", "label": "Destination", "reqd": 1, "in_list_view": 1},
-  {"fieldname": "destination_address", "fieldtype": "Small Text", "label": "Destination Address"},
-  {"fieldname": "col_break_4", "fieldtype": "Column Break"},
-  {"fieldname": "expected_pickup_date", "fieldtype": "Date", "label": "Expected Pickup Date"},
-  {"fieldname": "expected_delivery_date", "fieldtype": "Date", "label": "Expected Delivery Date"},
-  {"fieldname": "distance_km", "fieldtype": "Float", "label": "Distance (KM)", "precision": "2"},
-
-  {"fieldname": "section_cargo", "fieldtype": "Section Break", "label": "Cargo Details"},
+  {
+   "fieldname": "section_customer",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "label": "Contact Person",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "section_route",
+   "fieldtype": "Section Break",
+   "label": "Origin & Destination"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Origin",
+   "reqd": 1
+  },
+  {
+   "fieldname": "origin_address",
+   "fieldtype": "Small Text",
+   "label": "Origin Address"
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Destination",
+   "reqd": 1
+  },
+  {
+   "fieldname": "destination_address",
+   "fieldtype": "Small Text",
+   "label": "Destination Address"
+  },
+  {
+   "fieldname": "col_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_pickup_date",
+   "fieldtype": "Date",
+   "label": "Expected Pickup Date"
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "fieldtype": "Date",
+   "label": "Expected Delivery Date"
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Float",
+   "label": "Distance (KM)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_cargo",
+   "fieldtype": "Section Break",
+   "label": "Cargo Details"
+  },
   {
    "fieldname": "cargo_type",
    "fieldtype": "Select",
@@ -109,58 +201,193 @@
    "options": "General\nFragile\nHazardous\nPerishable\nOversized\nLiquid\nRefrigerated",
    "reqd": 1
   },
-  {"fieldname": "cargo_description", "fieldtype": "Small Text", "label": "Cargo Description"},
-  {"fieldname": "col_break_5", "fieldtype": "Column Break"},
-  {"fieldname": "total_weight_kg", "fieldtype": "Float", "label": "Total Weight (KG)", "precision": "3"},
-  {"fieldname": "total_volume_cbm", "fieldtype": "Float", "label": "Total Volume (CBM)", "precision": "3"},
-  {"fieldname": "no_of_packages", "fieldtype": "Int", "label": "No. of Packages"},
-  {"fieldname": "col_break_6", "fieldtype": "Column Break"},
-  {"fieldname": "length_cm", "fieldtype": "Float", "label": "Length (CM)", "precision": "2"},
-  {"fieldname": "width_cm", "fieldtype": "Float", "label": "Width (CM)", "precision": "2"},
-  {"fieldname": "height_cm", "fieldtype": "Float", "label": "Height (CM)", "precision": "2"},
-
-  {"fieldname": "section_service", "fieldtype": "Section Break", "label": "Service & Rates"},
-  {"fieldname": "service_type", "fieldtype": "Data", "label": "Service Type"},
+  {
+   "fieldname": "cargo_description",
+   "fieldtype": "Small Text",
+   "label": "Cargo Description"
+  },
+  {
+   "fieldname": "col_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_weight_kg",
+   "fieldtype": "Float",
+   "label": "Total Weight (KG)",
+   "precision": "3"
+  },
+  {
+   "fieldname": "total_volume_cbm",
+   "fieldtype": "Float",
+   "label": "Total Volume (CBM)",
+   "precision": "3"
+  },
+  {
+   "fieldname": "no_of_packages",
+   "fieldtype": "Int",
+   "label": "No. of Packages"
+  },
+  {
+   "fieldname": "col_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length_cm",
+   "fieldtype": "Float",
+   "label": "Length (CM)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "width_cm",
+   "fieldtype": "Float",
+   "label": "Width (CM)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "height_cm",
+   "fieldtype": "Float",
+   "label": "Height (CM)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_service",
+   "fieldtype": "Section Break",
+   "label": "Service & Rates"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Data",
+   "label": "Service Type"
+  },
   {
    "fieldname": "rate_type",
    "fieldtype": "Select",
    "label": "Rate Type",
    "options": "\nFixed\nPer KG\nPer CBM\nPer Package"
   },
-  {"fieldname": "col_break_7", "fieldtype": "Column Break"},
-  {"fieldname": "base_rate", "fieldtype": "Currency", "label": "Base Rate"},
-  {"fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "Currency", "default": "USD"},
-  {"fieldname": "col_break_8", "fieldtype": "Column Break"},
-  {"fieldname": "estimated_amount", "fieldtype": "Currency", "label": "Estimated Amount", "read_only": 1},
-  {"fieldname": "special_instructions", "fieldtype": "Small Text", "label": "Special Instructions"},
-
-  {"fieldname": "section_links", "fieldtype": "Section Break", "label": "Related Documents"},
-  {"fieldname": "vehicle_allocation", "fieldtype": "Link", "label": "Vehicle Allocation", "options": "Vehicle Allocation", "read_only": 1},
-  {"fieldname": "col_break_9", "fieldtype": "Column Break"},
-  {"fieldname": "waybill_count", "fieldtype": "Int", "label": "Waybills Created", "read_only": 1, "default": "0"}
+  {
+   "fieldname": "col_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_rate",
+   "fieldtype": "Currency",
+   "label": "Base Rate"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "col_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_amount",
+   "fieldtype": "Currency",
+   "label": "Estimated Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Small Text",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "section_links",
+   "fieldtype": "Section Break",
+   "label": "Related Documents"
+  },
+  {
+   "fieldname": "vehicle_allocation",
+   "fieldtype": "Link",
+   "label": "Vehicle Allocation",
+   "options": "Vehicle Allocation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "waybill_count",
+   "fieldtype": "Int",
+   "label": "Waybills Created",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-01 00:00:00.000000",
+ "modified": "2026-02-27 21:26:52.836017",
  "modified_by": "Administrator",
  "module": "Cargo Flow",
  "name": "Booking",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
-  {"role": "Cargo Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
-  {"role": "Cargo Booking Agent", "read": 1, "write": 1, "create": 1, "submit": 1},
-  {"role": "Logistics Manager", "read": 1}
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Cargo Admin",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Cargo Booking Agent",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Logistics Manager"
+  }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [
-  {"color": "Gray", "title": "Draft"},
-  {"color": "Blue", "title": "Confirmed"},
-  {"color": "Orange", "title": "Allocated"},
-  {"color": "Yellow", "title": "In Transit"},
-  {"color": "Green", "title": "Delivered"},
-  {"color": "Red", "title": "Cancelled"}
+  {
+   "color": "Gray",
+   "title": "Draft"
+  },
+  {
+   "color": "Blue",
+   "title": "Confirmed"
+  },
+  {
+   "color": "Orange",
+   "title": "Allocated"
+  },
+  {
+   "color": "Yellow",
+   "title": "In Transit"
+  },
+  {
+   "color": "Green",
+   "title": "Delivered"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  }
  ],
  "title_field": "customer_name",
  "track_changes": 1

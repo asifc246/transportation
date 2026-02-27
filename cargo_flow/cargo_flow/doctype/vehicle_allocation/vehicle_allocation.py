@@ -2,11 +2,19 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import flt, today
 
-
 class VehicleAllocation(Document):
 
     def validate(self):
         self._warn_weight_mismatch()
+
+        if self.no_of_packages:
+            vehicle_count = len(self.vehicles or [])
+            
+            if vehicle_count != self.no_of_packages:
+                frappe.throw(
+                    ("Number of Vehicles ({0}) must be equal to No of Packages ({1})")
+                    .format(vehicle_count, self.no_of_packages)
+                )
 
     def on_submit(self):
         self.db_set("status", "Confirmed")
